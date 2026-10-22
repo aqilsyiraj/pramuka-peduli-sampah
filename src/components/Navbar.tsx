@@ -98,12 +98,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               <h1 className="font-heading text-lg sm:text-xl font-bold text-amber-950 tracking-tight leading-tight">
                 Pramuka Peduli Sampah
               </h1>
-              <span className="text-xs px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">
-                SD Interaktif
+              <span className="text-xs px-2 py-0.5 rounded-md bg-amber-700 text-white font-bold border border-amber-800">
+                Pramuka Penggalang
               </span>
             </div>
             <p className="text-xs text-amber-800/80">
-              Media Belajar & Game Pemilahan Sampah Siaga/Penggalang
+              Media Belajar & Game Pemilahan Sampah Pasukan Penggalang
             </p>
           </div>
         </div>

@@ -137,11 +137,11 @@ export const WasteGame: React.FC<WasteGameProps> = ({
       });
 
       if (level === 1) {
-        onBadgeUnlocked('🎖️ Lencana Siaga Mula Pemilah Sampah');
+        onBadgeUnlocked('🎖️ Lencana Penggalang Ramu Pemilah Sampah');
       } else if (level === 2) {
-        onBadgeUnlocked('🎖️ Lencana Siaga Bantu Peduli Lingkungan');
+        onBadgeUnlocked('🎖️ Lencana Penggalang Rakit Peduli Lingkungan');
       } else if (level === 3) {
-        onBadgeUnlocked('👑 Lencana TKK Siaga Tata / Penggalang Teladan');
+        onBadgeUnlocked('👑 Lencana TKK Penggalang Terap Teladan');
       }
     } else {
       setCurrentIndex((prev) => prev + 1);
@@ -163,7 +163,7 @@ export const WasteGame: React.FC<WasteGameProps> = ({
               </span>
             </div>
             <h2 className="font-heading text-xl sm:text-2xl font-black text-amber-950">
-              Game Pilah Kilat Pramuka
+              Game Pilah Kilat Penggalang
             </h2>
           </div>
 
@@ -180,7 +180,7 @@ export const WasteGame: React.FC<WasteGameProps> = ({
                   : 'text-amber-950 hover:bg-amber-200/60'
               }`}
             >
-              Lvl 1: Mula
+              Lvl 1: Ramu
             </button>
             <button
               onClick={() => {
@@ -193,7 +193,7 @@ export const WasteGame: React.FC<WasteGameProps> = ({
                   : 'text-amber-950 hover:bg-amber-200/60'
               }`}
             >
-              Lvl 2: Bantu
+              Lvl 2: Rakit
             </button>
             <button
               onClick={() => {
@@ -206,7 +206,7 @@ export const WasteGame: React.FC<WasteGameProps> = ({
                   : 'text-amber-950 hover:bg-amber-200/60'
               }`}
             >
-              Lvl 3: Tata
+              Lvl 3: Terap
             </button>
           </div>
         </div>
@@ -367,10 +367,10 @@ export const WasteGame: React.FC<WasteGameProps> = ({
         <div className="bg-white rounded-3xl border-2 border-rose-300 p-8 text-center space-y-4 shadow-lg">
           <div className="text-6xl animate-bounce">💔</div>
           <h3 className="font-heading text-2xl font-black text-rose-950">
-            Nyawa Habis, Tetap Semangat Adik Pramuka!
+            Nyawa Habis, Tetap Semangat Penggalang Tangguh!
           </h3>
           <p className="text-sm text-slate-600 max-w-md mx-auto">
-            Dwidarma Pramuka Siaga mengajarkan kita untuk <strong>"Berani dan tidak putus asa!"</strong>. Ayo ulangi lagi dan raih lencanamu!
+            Dasa Darma Pramuka mengajarkan kita untuk <strong>"Rela menolong dan tabah!"</strong> serta pantang berputus asa. Ayo bangkit lagi dan raih lencana regumu!
           </p>
           <div className="flex items-center justify-center gap-3 pt-2">
             <button

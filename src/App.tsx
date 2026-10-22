@@ -37,12 +37,12 @@ export default function App() {
       }
     }
     return {
-      name: 'Adik Siaga Teladan',
-      school: 'SD Negeri 01 Teladan',
-      scoutTroop: 'Barung Merah',
+      name: 'Adik Penggalang Teladan',
+      school: 'Gudep Pangkalan SMP/SD',
+      scoutTroop: 'Regu Rajawali',
       score: 0,
       quizScore: 0,
-      unlockedBadges: ['⚜️ Anggota Siaga Pemula'],
+      unlockedBadges: ['⚜️ Anggota Penggalang Ramu'],
     };
   });
 
@@ -222,7 +222,7 @@ export default function App() {
           <span>Satyaku Kudarmakan, Darmaku Kubaktikan</span>
         </div>
         <p className="max-w-xl mx-auto text-slate-500 leading-relaxed">
-          Media Pembelajaran Interaktif Pemilahan Sampah untuk Siswa Sekolah Dasar (Pramuka Siaga & Penggalang) — 
+          Media Pembelajaran Interaktif Pemilahan Sampah untuk Pasukan Penggalang (Tingkat Ramu, Rakit, Terap) — 
           Karya Inovasi Media Pembelajaran Ujian Kursus Mahir Dasar (KMD) Pramuka.
         </p>
         <div className="pt-2 text-slate-400">

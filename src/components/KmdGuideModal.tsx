@@ -21,7 +21,7 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-amber-800">
-                Dokumen Portofolio Ujian KMD Pramuka
+                Dokumen Portofolio Ujian KMD Pramuka Penggalang
               </span>
               <h2 className="font-heading text-xl sm:text-2xl font-black text-amber-950">
                 Panduan Modul Ajar & Rubrik Penilai KMD
@@ -44,34 +44,35 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
         <div className="space-y-3">
           <h3 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
             <Target className="w-4 h-4 text-amber-700" />
-            <span>1. Latar Belakang & Landasan Teori Kepramukaan</span>
+            <span>1. Latar Belakang & Landasan Teori Kepramukaan Penggalang</span>
           </h3>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-amber-50/50 p-4 rounded-2xl border border-amber-200/70">
-            Pendidikan kepramukaan menanamkan karakter peduli lingkungan sejak dini. Dalam <strong>Dasa Darma Pramuka ke-2: "Cinta alam dan kasih sayang sesama manusia"</strong>, 
-            peserta didik dituntut tidak hanya berteori, namun memiliki kecakapan praktis (life skills) dalam mengelola sampah. Media interaktif ini dirancang dengan pendekatan 
-            <strong> Belajar Sambil Melakukan (Learning by Doing)</strong> agar anak usia Sekolah Dasar (Pramuka Siaga & Penggalang) dapat membedakan 5 jenis sampah secara visual, audio, dan kinestetik.
+            Pendidikan kepramukaan golongan Penggalang (usia 11-15 tahun) menanamkan jiwa kepemimpinan regu, kemandirian, dan kepedulian lingkungan. 
+            Berdasarkan <strong>Trisatya dan Dasa Darma Pramuka ke-2: "Cinta alam dan kasih sayang sesama manusia"</strong>, 
+            anggota Penggalang dituntut memiliki kecakapan hidup praktis (life skills) dalam memilah dan mengelola sampah di pangkalan serta bumi perkemahan. 
+            Media interaktif ini dirancang dengan metode kepramukaan <strong>Belajar Sambil Melakukan (Learning by Doing)</strong> dan sistem beregu agar penggalang dapat mempraktikkan pemilahan 5 jenis sampah.
           </p>
         </div>
 
-        {/* Section 2: Pemetaan Kurikulum & Syarat Kecakapan (SKU / SKK) */}
+        {/* Section 2: Pemetaan Kurikulum & Syarat Kecakapan (SKU / SKK) Penggalang */}
         <div className="space-y-3">
           <h3 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
             <Shield className="w-4 h-4 text-emerald-700" />
-            <span>2. Keterkaitan dengan Syarat Kecakapan (SKU & SKK)</span>
+            <span>2. Keterkaitan dengan Syarat Kecakapan Penggalang (SKU & SKK)</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-              <strong className="text-amber-900 block font-heading font-bold">Pramuka Siaga (Usia 7-10 Th):</strong>
+              <strong className="text-amber-900 block font-heading font-bold">SKU Penggalang Ramu & Rakit:</strong>
               <p className="text-slate-600">
-                • SKU Siaga Bantu: Dapat memelihara kebersihan lingkungan sekolah dan perindukan.<br />
-                • Tanda Kecakapan Khusus (TKK) Pengatur Rumah / Kebersihan Lingkungan tingkat Purwa.
+                • SKU Ramu: Dapat menjaga kebersihan lingkungan pangkalan dan memilah sampah basah/kering.<br />
+                • SKU Rakit: Memahami bahaya pencemaran lingkungan akibat plastik dan zat B3 bagi tanah dan air.
               </p>
             </div>
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-              <strong className="text-amber-900 block font-heading font-bold">Pramuka Penggalang (Usia 11-15 Th):</strong>
+              <strong className="text-amber-900 block font-heading font-bold">SKU Penggalang Terap & SKK/TKK:</strong>
               <p className="text-slate-600">
-                • SKU Penggalang Ramu: Memahami pengelolaan sampah mandiri dan bahaya polusi plastik.<br />
-                • TKK Daur Ulang & Pengelola Sampah (Bank Sampah Gugus Depan).
+                • SKU Terap: Mampu memimpin regu dalam kerja bakti pelestarian alam dan daur ulang 3R.<br />
+                • TKK Pengatur Kebersihan Lingkungan, TKK Juru Daur Ulang, dan TKK Berkemah.
               </p>
             </div>
           </div>
@@ -81,24 +82,24 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
         <div className="space-y-3">
           <h3 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-sky-700" />
-            <span>3. Rencana Pelaksanaan Kegiatan (RPK) / Skenario Pembelajaran</span>
+            <span>3. Rencana Pelaksanaan Kegiatan (RPK) Pasukan Penggalang</span>
           </h3>
           <div className="space-y-2 text-xs text-slate-700">
             <div className="p-3 rounded-xl bg-amber-50/40 border border-amber-200/50 flex items-start gap-2">
               <span className="font-bold text-amber-800 shrink-0">Tahap 1 (10 Menit):</span>
-              <p>Pembukaan dengan <em>Tepuk Pramuka</em> dan pengenalan 5 Karakter Tong Sampah (Jelajah Tong Sampah).</p>
+              <p>Pembukaan latihan pasukan dengan <em>Tepuk Pramuka</em> dan orientasi 5 Karakter Tong Sampah (Jelajah Tong Sampah).</p>
             </div>
             <div className="p-3 rounded-xl bg-amber-50/40 border border-amber-200/50 flex items-start gap-2">
               <span className="font-bold text-amber-800 shrink-0">Tahap 2 (20 Menit):</span>
-              <p>Simulasi interaktif kelompok melalui <em>Game Pilah Kilat</em> (Level 1 Mula hingga Level 3 Tata).</p>
+              <p>Simulasi ketangkasan beregu melalui <em>Game Pilah Kilat Penggalang</em> (Level 1 Ramu, Level 2 Rakit, Level 3 Terap).</p>
             </div>
             <div className="p-3 rounded-xl bg-amber-50/40 border border-amber-200/50 flex items-start gap-2">
               <span className="font-bold text-amber-800 shrink-0">Tahap 3 (20 Menit):</span>
-              <p>Praktik nyata membuat karya 3R di menu <em>Bengkel Kreasi Daur Ulang</em> (Botol plastik jadi pot hias).</p>
+              <p>Praktik nyata keterampilan regu membuat karya daur ulang 3R di <em>Bengkel Kreasi Daur Ulang</em> (Pot botol, celengan regu, ecobrick).</p>
             </div>
             <div className="p-3 rounded-xl bg-amber-50/40 border border-amber-200/50 flex items-start gap-2">
               <span className="font-bold text-amber-800 shrink-0">Tahap 4 (20 Menit):</span>
-              <p>Evaluasi mandiri dengan <em>Kuis Uji Kecakapan</em> dan penerbitan <em>Piagam TKK Digital</em>.</p>
+              <p>Evaluasi mandiri dengan <em>Kuis Uji Kecakapan Penggalang</em> dan penerbitan <em>Piagam TKK Digital</em>.</p>
             </div>
           </div>
         </div>
@@ -107,25 +108,26 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
         <div className="space-y-3">
           <h3 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
             <Music className="w-4 h-4 text-rose-700" />
-            <span>4. Ice Breaking: Yel-Yel & Tepuk Sampah Sehat</span>
+            <span>4. Ice Breaking: Yel-Yel & Tepuk Sampah Sehat Penggalang</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-amber-50 p-4 rounded-2xl border border-amber-200">
             <div>
-              <strong className="text-amber-900 block font-heading mb-1">👏 Tepuk Sampah Sehat:</strong>
+              <strong className="text-amber-900 block font-heading mb-1">👏 Tepuk Sampah Sehat Penggalang:</strong>
               <p className="text-slate-700 italic leading-relaxed">
                 (Prok prok prok) Sampah Hijau... Organik!<br />
                 (Prok prok prok) Sampah Kuning... Anorganik!<br />
-                (Prok prok prok) Sampah Merah... B3 Beracun!<br />
-                (Prok prok prok) Jangan Buang Sembarangan... SEHAT BERSERI!
+                (Prok prok prok) Sampah Biru... Kertas Bersih!<br />
+                (Prok prok prok) Sampah Merah... B3 Waspada!<br />
+                (Prok prok prok) Penggalang Tangguh... BUMI LESTARI!
               </p>
             </div>
             <div>
-              <strong className="text-amber-900 block font-heading mb-1">🎵 Nada Lagu: "Kalau Kau Suka Hati"</strong>
+              <strong className="text-amber-900 block font-heading mb-1">🎵 Yel-Yel Semangat Regu Penggalang:</strong>
               <p className="text-slate-700 italic leading-relaxed">
-                Kalau kau cinta alam pilah sampah (Bisa!)<br />
-                Kalau kau pramuka sejati pilah sampah (Pasti!)<br />
-                Tong hijau sisa makan, tong kuning plastik kaleng,<br />
-                Bumi kita pun asri dan lestari!
+                Siapa kita? Pasukan Penggalang!<br />
+                Apa tugas kita? Cinta Alam dan Kasih Sayang!<br />
+                Pilah sampah sekarang, jaga bumi lestari!<br />
+                Salam Pramuka! JAYA! JAYA! JAYA!
               </p>
             </div>
           </div>
@@ -135,7 +137,7 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
         <div className="space-y-3">
           <h3 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
             <Award className="w-4 h-4 text-amber-700" />
-            <span>5. Rubrik Penilaian Kelulusan KMD</span>
+            <span>5. Rubrik Penilaian Kelulusan KMD Penggalang</span>
           </h3>
           <table className="w-full text-xs text-left border border-slate-200 rounded-xl overflow-hidden">
             <thead className="bg-amber-100 text-amber-950 font-bold">
@@ -148,17 +150,17 @@ export const KmdGuideModal: React.FC<KmdGuideModalProps> = ({ isOpen, onClose })
             <tbody className="divide-y divide-slate-200">
               <tr>
                 <td className="p-2.5 font-semibold text-slate-800">Kognitif (Pengetahuan)</td>
-                <td className="p-2.5 text-slate-600">Nilai kuis pemahaman &gt;= 70 poin</td>
+                <td className="p-2.5 text-slate-600">Nilai kuis kecakapan pemilahan &ge; 70 poin</td>
                 <td className="p-2.5 font-bold text-amber-900">30%</td>
               </tr>
               <tr>
                 <td className="p-2.5 font-semibold text-slate-800">Psikomotorik (Keterampilan)</td>
-                <td className="p-2.5 text-slate-600">Ketepatan menyortir pada Game Pilah Kilat level 1-3</td>
+                <td className="p-2.5 text-slate-600">Ketepatan menyortir pada Game Pilah Kilat (Ramu, Rakit, Terap)</td>
                 <td className="p-2.5 font-bold text-amber-900">40%</td>
               </tr>
               <tr>
                 <td className="p-2.5 font-semibold text-slate-800">Afektif (Sikap Pramuka)</td>
-                <td className="p-2.5 text-slate-600">Praktik nyata 3R dan gotong royong membersihkan tenda</td>
+                <td className="p-2.5 text-slate-600">Kepemimpinan regu, kepedulian lingkungan perkemahan, dan amalan Dasa Darma</td>
                 <td className="p-2.5 font-bold text-amber-900">30%</td>
               </tr>
             </tbody>

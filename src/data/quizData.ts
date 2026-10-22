@@ -3,8 +3,8 @@ import { QuizQuestion } from '../types';
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     id: 1,
-    question: 'Saat selesai makan bekal buah pisang dan apel di perkemahan, ke manakah adik Siaga harus membuang kulit buah tersebut?',
-    scenario: 'Bekal buah saat istirahat latihan pramuka di pangkalan SDN.',
+    question: 'Saat selesai makan bekal buah pisang dan apel di perkemahan, ke manakah adik Penggalang harus membuang kulit buah tersebut?',
+    scenario: 'Bekal buah saat istirahat latihan regu pramuka penggalang di pangkalan.',
     options: [
       { id: 'A', text: 'Tong Hijau (Sampah Organik)', categoryTarget: 'organik' },
       { id: 'B', text: 'Tong Kuning (Sampah Anorganik)', categoryTarget: 'anorganik' },
@@ -31,7 +31,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 3,
-    question: 'Di malam hari saat kegiatan api unggun, lampu senter adik Siaga mati karena kehabisan baterai. Ke tong sampah warna apa baterai bekas harus dibuang?',
+    question: 'Di malam hari saat kegiatan api unggun, lampu senter adik Penggalang mati karena kehabisan baterai. Ke tong sampah warna apa baterai bekas harus dibuang?',
     scenario: 'Kegiatan Malam Api Unggun di lapangan perkemahan.',
     options: [
       { id: 'A', text: 'Tong Hijau (Organik)' },
@@ -59,8 +59,8 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     id: 5,
-    question: 'Contoh nyata tindakan REDUCE (mengurangi sampah) yang paling tepat untuk seorang Pramuka Siaga adalah...',
-    scenario: 'Mempersiapkan perlengkapan sebelum berangkat ke sekolah.',
+    question: 'Contoh nyata tindakan REDUCE (mengurangi sampah) yang paling tepat untuk seorang Pramuka Penggalang adalah...',
+    scenario: 'Mempersiapkan perlengkapan sebelum berangkat ke sekolah atau perkemahan.',
     options: [
       { id: 'A', text: 'Membeli banyak minuman botol plastik sekali pakai setiap hari' },
       { id: 'B', text: 'Membawa botol minum (tumbler) dan kotak bekal sendiri dari rumah' },

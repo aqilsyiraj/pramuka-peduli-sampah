@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, Printer, Download, Share2, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { Award, Printer, CheckCircle2 } from 'lucide-react';
 import { StudentProfile } from '../types';
 import { playClickSound } from '../utils/audio';
 
@@ -12,11 +12,11 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
   profile,
   onUpdateProfile,
 }) => {
-  const [studentName, setStudentName] = useState(profile.name || 'Adik Siaga Teladan');
-  const [schoolName, setSchoolName] = useState(profile.school || 'SD Negeri 01 Teladan');
-  const [troopName, setTroopName] = useState(profile.scoutTroop || 'Barung Merah');
-  const [pembinaName, setPembinaName] = useState('Kakak Pembina KMD Pramuka');
-  const [scoutLevel, setScoutLevel] = useState<'Pramuka Siaga' | 'Pramuka Penggalang'>('Pramuka Siaga');
+  const [studentName, setStudentName] = useState(profile.name || 'Adik Penggalang Teladan');
+  const [schoolName, setSchoolName] = useState(profile.school || 'Gugus Depan Pangkalan SMP/SD');
+  const [troopName, setTroopName] = useState(profile.scoutTroop || 'Regu Rajawali');
+  const [pembinaName, setPembinaName] = useState('Kakak Pembina Penguji KMD');
+  const [penggalangRank, setPenggalangRank] = useState<'Penggalang Ramu' | 'Penggalang Rakit' | 'Penggalang Terap'>('Penggalang Ramu');
 
   const todayStr = new Date().toLocaleDateString('id-ID', {
     day: 'numeric',
@@ -46,13 +46,13 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-800 uppercase tracking-wider mb-1">
               <Award className="w-4 h-4 text-amber-600" />
-              <span>Apresiasi Kecakapan Lingkungan</span>
+              <span>Apresiasi Kecakapan Lingkungan Penggalang</span>
             </div>
             <h2 className="font-heading text-xl sm:text-2xl font-bold text-amber-950">
-              Piagam & Lencana TKK Pemilah Sampah
+              Piagam & Lencana TKK Pemilah Sampah Penggalang
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-              Isi data adik pramuka di bawah ini untuk mencetak Piagam Penghargaan Resmi dari Ujian KMD Pramuka.
+              Isi data anggota Pasukan Penggalang di bawah ini untuk mencetak Piagam Penghargaan Resmi Ujian KMD Pramuka.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6 pt-6 border-t border-amber-100">
           <div>
             <label className="block text-[11px] font-bold text-amber-900 uppercase mb-1">
-              Nama Lengkap Siswa
+              Nama Lengkap Penggalang
             </label>
             <input
               type="text"
@@ -85,7 +85,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
 
           <div>
             <label className="block text-[11px] font-bold text-amber-900 uppercase mb-1">
-              Nama Pangkalan / Sekolah
+              Nama Pangkalan / Gugus Depan
             </label>
             <input
               type="text"
@@ -95,13 +95,13 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
                 handleSaveData();
               }}
               className="w-full px-3 py-2 rounded-xl border border-amber-300 bg-amber-50/50 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              placeholder="Contoh: SDN 04 Merdeka"
+              placeholder="Contoh: Gudep 01.05 - SMP/SD Merdeka"
             />
           </div>
 
           <div>
             <label className="block text-[11px] font-bold text-amber-900 uppercase mb-1">
-              Nama Barung / Regu
+              Nama Regu Penggalang
             </label>
             <input
               type="text"
@@ -111,7 +111,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
                 handleSaveData();
               }}
               className="w-full px-3 py-2 rounded-xl border border-amber-300 bg-amber-50/50 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
-              placeholder="Contoh: Barung Hijau"
+              placeholder="Contoh: Regu Rajawali / Regu Melati"
             />
           </div>
 
@@ -129,30 +129,23 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
           </div>
         </div>
 
-        {/* Scout Category Selector */}
+        {/* Scout Category Selector - Only Penggalang Ranks */}
         <div className="flex items-center gap-3 mt-4">
-          <span className="text-xs font-bold text-amber-900">Tingkat Satuan:</span>
+          <span className="text-xs font-bold text-amber-900">Tingkatan Penggalang:</span>
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setScoutLevel('Pramuka Siaga')}
-              className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${
-                scoutLevel === 'Pramuka Siaga'
-                  ? 'bg-amber-800 text-white border-amber-900'
-                  : 'bg-white text-slate-700 border-slate-200'
-              }`}
-            >
-              Pramuka Siaga (SD Kelas 1-4)
-            </button>
-            <button
-              onClick={() => setScoutLevel('Pramuka Penggalang')}
-              className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${
-                scoutLevel === 'Pramuka Penggalang'
-                  ? 'bg-amber-800 text-white border-amber-900'
-                  : 'bg-white text-slate-700 border-slate-200'
-              }`}
-            >
-              Pramuka Penggalang (SD Kelas 5-6)
-            </button>
+            {(['Penggalang Ramu', 'Penggalang Rakit', 'Penggalang Terap'] as const).map((rank) => (
+              <button
+                key={rank}
+                onClick={() => setPenggalangRank(rank)}
+                className={`px-3 py-1 rounded-lg text-xs font-bold border transition-colors ${
+                  penggalangRank === rank
+                    ? 'bg-amber-800 text-white border-amber-900'
+                    : 'bg-white text-slate-700 border-slate-200 hover:bg-amber-50'
+                }`}
+              >
+                {rank}
+              </button>
+            ))}
           </div>
         </div>
       </div>
@@ -170,7 +163,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
                   GERAKAN PRAMUKA INDONESIA
                 </span>
                 <span className="text-[11px] text-amber-800 font-semibold block">
-                  Kwartir Ranting · Ujian Kursus Mahir Dasar (KMD)
+                  Kwartir Ranting · Pasukan Penggalang · Ujian Kursus Mahir Dasar (KMD)
                 </span>
               </div>
               <span className="text-4xl">🌿</span>
@@ -182,20 +175,20 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
               PIAGAM PENGHARGAAN
             </h1>
             <p className="text-xs sm:text-sm font-bold text-emerald-800 tracking-wider uppercase">
-              Tanda Kecakapan Khusus (TKK) Peduli Lingkungan & Pemilah Sampah
+              Tanda Kecakapan Khusus (TKK) Peduli Lingkungan & Pemilah Sampah Penggalang
             </p>
           </div>
 
           {/* Recipient Text */}
           <div className="space-y-2 py-2">
             <p className="text-xs sm:text-sm text-slate-600">
-              Dengan bangga diberikan kepada anggota Gerakan Pramuka:
+              Dengan bangga diberikan kepada anggota Pramuka Penggalang:
             </p>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-amber-950 underline decoration-amber-500 underline-offset-8">
-              {studentName || 'Adik Pramuka'}
+              {studentName || 'Adik Penggalang'}
             </h2>
             <p className="text-xs sm:text-sm font-semibold text-amber-900">
-              {scoutLevel} · {troopName} · {schoolName}
+              {penggalangRank} · {troopName} · {schoolName}
             </p>
           </div>
 
@@ -203,7 +196,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
           <div className="max-w-xl mx-auto text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2 bg-amber-50/60 p-4 rounded-xl border border-amber-200">
             <p>
               Telah berhasil menyelesaikan pembelajaran interaktif dan lulus uji kecakapan dalam 
-              <strong> Memilah 5 Jenis Sampah (Organik, Anorganik, Kertas, B3, dan Residu)</strong> serta mengamalkan prinsip 3R demi menjaga kelestarian bumi sesuai amanat <strong>Dasa Darma Pramuka ke-2: Cinta alam dan kasih sayang sesama manusia</strong>.
+              <strong> Memilah 5 Jenis Sampah (Organik, Anorganik, Kertas, B3, dan Residu)</strong> serta memimpin regu dalam mengamalkan prinsip 3R demi kelestarian alam sesuai amanat <strong>Trisatya dan Dasa Darma Pramuka ke-2: Cinta alam dan kasih sayang sesama manusia</strong>.
             </p>
           </div>
 
@@ -214,7 +207,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
                 ♻️
               </div>
               <span className="text-[10px] font-black uppercase text-amber-900 mt-1">
-                TKK Sampah
+                TKK Daur Ulang
               </span>
             </div>
 
@@ -232,7 +225,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
                 ⚜️
               </div>
               <span className="text-[10px] font-black uppercase text-sky-900 mt-1">
-                Siaga Teladan
+                Penggalang Teladan
               </span>
             </div>
           </div>
@@ -255,7 +248,7 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
 
             <div>
               <span className="text-slate-500 block">Pembina Penguji KMD:</span>
-              <span className="font-semibold text-slate-800">Gugus Depan Siaga</span>
+              <span className="font-semibold text-slate-800">Pasukan Penggalang</span>
               <div className="h-14 flex items-end justify-center">
                 <span className="font-heading font-bold text-amber-900 text-sm italic">
                   {pembinaName}

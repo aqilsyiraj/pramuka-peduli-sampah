@@ -37,7 +37,7 @@ export const CraftWorkshop: React.FC<CraftWorkshopProps> = ({ onBadgeUnlocked })
         <div className="max-w-2xl space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/30 text-amber-200 text-xs font-bold border border-amber-400/30">
             <Hammer className="w-3.5 h-3.5 text-amber-300" />
-            <span>Prakarya Siaga & Penggalang Ramah Lingkungan</span>
+            <span>Prakarya Pasukan Penggalang Ramah Lingkungan</span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl font-black text-white">
             Bengkel Kreasi Daur Ulang 3R
@@ -125,7 +125,7 @@ export const CraftWorkshop: React.FC<CraftWorkshopProps> = ({ onBadgeUnlocked })
           <div className="lg:col-span-5 space-y-4 bg-amber-50/50 p-5 rounded-2xl border border-amber-200/60">
             <div className="flex items-center justify-between">
               <h4 className="font-heading font-bold text-base text-amber-950 flex items-center gap-2">
-                <span>Alat & Bahan Siaga</span>
+                <span>Alat & Bahan Regu Penggalang</span>
               </h4>
               <span className="text-xs text-amber-800">
                 Centang yang sudah siap:

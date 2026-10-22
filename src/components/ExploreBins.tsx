@@ -43,8 +43,8 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
           </h1>
 
           <p className="text-amber-100/90 text-sm sm:text-base leading-relaxed">
-            Sebagai anggota Gerakan Pramuka (Siaga & Penggalang), kita mengamalkan <strong>Dasa Darma ke-2: Cinta alam dan kasih sayang sesama manusia</strong>. 
-            Langkah pertama yang paling hebat adalah memilah sampah ke dalam 5 tong sampah warna-warni!
+            Sebagai anggota Pramuka Penggalang (Ramu, Rakit, Terap), kita mengamalkan <strong>Dasa Darma ke-2: Cinta alam dan kasih sayang sesama manusia</strong>. 
+            Langkah nyata kepemimpinan regu dimulai dari memilah sampah ke dalam 5 tong sampah ramah lingkungan!
           </p>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
@@ -293,7 +293,7 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
       <section className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-amber-950 text-white rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
         <div className="max-w-2xl">
           <span className="text-xs font-bold uppercase tracking-wider text-emerald-300">
-            Kecakapan Hidup Siaga & Penggalang
+            Kecakapan Hidup Pasukan Penggalang
           </span>
           <h2 className="font-heading text-2xl font-bold mt-1 text-white">
             Prinsip 3R + 1R: Senjata Rahasia Pramuka Ramah Lingkungan

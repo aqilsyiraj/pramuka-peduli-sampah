@@ -93,7 +93,7 @@ export const ScoutQuiz: React.FC<ScoutQuizProps> = ({
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
-              Ujian Kecakapan Siaga & Penggalang
+              Ujian Kecakapan Pasukan Penggalang
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-black text-white">
               Kuis Pramuka Peduli Sampah

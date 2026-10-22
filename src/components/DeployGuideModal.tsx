@@ -26,6 +26,31 @@ git branch -M main
 git remote add origin https://github.com/USERNAME/pramuka-peduli-sampah.git
 git push -u origin main`;
 
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownloadZip = async () => {
+    playClickSound();
+    setDownloading(true);
+    try {
+      const res = await fetch('/pramuka-peduli-sampah-source.zip');
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'pramuka-peduli-sampah-source.zip';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+      }, 200);
+    } catch {
+      window.location.href = '/pramuka-peduli-sampah-source.zip';
+    } finally {
+      setDownloading(false);
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs overflow-y-auto">
       <div className="bg-white rounded-3xl border border-amber-200 max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl space-y-6">
@@ -71,15 +96,14 @@ git push -u origin main`;
             Kamu bisa langsung mengunduh seluruh source code website ini dalam 1 file ZIP lengkap yang sudah siap pakai dan terkonfigurasi untuk Vercel:
           </p>
 
-          <a
-            href="/pramuka-peduli-sampah-source.zip"
-            download="pramuka-peduli-sampah-source.zip"
-            onClick={playClickSound}
-            className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:scale-101 active:scale-99"
+          <button
+            onClick={handleDownloadZip}
+            disabled={downloading}
+            className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:scale-101 active:scale-99 disabled:opacity-50"
           >
             <Download className="w-4 h-4 text-amber-300" />
-            <span>Unduh File Source Code (pramuka-peduli-sampah-source.zip)</span>
-          </a>
+            <span>{downloading ? 'Mengunduh File...' : 'Unduh File Source Code (.ZIP)'}</span>
+          </button>
         </div>
 
         {/* Option 2: Push via Git Terminal */}

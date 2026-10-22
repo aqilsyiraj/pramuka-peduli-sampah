@@ -1,6 +1,6 @@
 {
-  "name": "Pramuka Peduli Sampah - Media Pembelajaran Interaktif KMD",
-  "description": "Media pembelajaran interaktif pemilahan sampah untuk anak SD / Pramuka Siaga & Penggalang dalam rangka Ujian KMD Pramuka.",
+  "name": "Pramuka Penggalang Peduli Sampah - Media Pembelajaran KMD",
+  "description": "Media pembelajaran interaktif pemilahan sampah khusus Pramuka Penggalang (Ramu, Rakit, Terap) dalam rangka Ujian KMD Pramuka.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

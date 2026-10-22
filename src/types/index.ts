@@ -23,12 +23,12 @@ export interface WasteItem {
   name: string;
   category: string; // matches TrashBinCategory.id
   emoji: string;
-  origin: string; // e.g. "Bekas sarapan di kantin", "Taman sekolah"
+  origin: string; // e.g. "Bekas sarapan regu di kantin", "Taman sekolah"
   hint: string;
   funFact: string;
   decompositionTime: string; // e.g. "2-5 minggu", "450 tahun"
   difficulty: 'mudah' | 'sedang' | 'sulit';
-  level: 1 | 2 | 3; // 1: Siaga Mula, 2: Siaga Bantu, 3: Siaga Tata
+  level: 1 | 2 | 3; // 1: Penggalang Ramu, 2: Penggalang Rakit, 3: Penggalang Terap
 }
 
 export interface QuizQuestion {
@@ -61,7 +61,7 @@ export interface CraftIdea {
 export interface StudentProfile {
   name: string;
   school: string;
-  scoutTroop: string; // e.g. "Barung Merah" / "Regu Rajawali"
+  scoutTroop: string; // e.g. "Regu Rajawali" / "Regu Melati"
   score: number;
   quizScore: number;
   unlockedBadges: string[];
