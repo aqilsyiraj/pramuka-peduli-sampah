@@ -13,7 +13,7 @@ export const TRASH_BINS: TrashBinCategory[] = [
     emoji: '🍃',
     iconName: 'Leaf',
     description: 'Berasal dari makhluk hidup (tumbuhan & hewan) dan mudah membusuk secara alami oleh tanah.',
-    kidsExplanation: 'Halo Adik Pramuka! Aku Tong Hijau. Masukkan sisa makanan atau daun gugur ke perutku ya. Aku bisa mengubahnya jadi pupuk kompos yang menyuburkan tanaman!',
+    kidsExplanation: 'Salam Pramuka, Rekan Penggalang! Aku Tong Hijau. Masukkan sisa makanan atau dedaunan kering pangkalan ke perutku ya. Aku bisa mengubahnya jadi pupuk kompos yang menyuburkan tanaman!',
     benefits: 'Bisa dijadikan pupuk kompos, pakan ternak/maggot, dan biogas ramah lingkungan.',
     processedInto: ['Pupuk Kompos Alami', 'Tanah Humus Subur', 'Pakan Maggot BSF', 'Biogas Ramah Lingkungan'],
     tips: 'Jangan campur dengan plastik pembungkus ya! Pisahkan kulit buah dan sisa sayur dari plastiknya.',

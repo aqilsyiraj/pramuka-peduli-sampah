@@ -11,26 +11,34 @@ import { CraftWorkshop } from './components/CraftWorkshop';
 import { ScoutQuiz } from './components/ScoutQuiz';
 import { CertificateGenerator } from './components/CertificateGenerator';
 import { KmdGuideModal } from './components/KmdGuideModal';
-import { DeployGuideModal } from './components/DeployGuideModal';
 import { StudentProfile } from './types';
-import { Award, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Award, Sparkles } from 'lucide-react';
 import { playSuccessSound } from './utils/audio';
 
-const STORAGE_KEY = 'pramuka_peduli_sampah_profile_v1';
+const STORAGE_KEY = 'pramuka_penggalang_sampah_profile_v2';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('explore');
   const [isKmdModalOpen, setIsKmdModalOpen] = useState<boolean>(false);
-  const [isDeployModalOpen, setIsDeployModalOpen] = useState<boolean>(false);
   const [newBadgeToast, setNewBadgeToast] = useState<string | null>(null);
 
   // Student Profile state
   const [profile, setProfile] = useState<StudentProfile>(() => {
     if (typeof window !== 'undefined') {
+      // Clear legacy storage key if exists to prevent residual values
+      localStorage.removeItem('pramuka_peduli_sampah_profile_v1');
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         try {
-          return JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (parsed && Array.isArray(parsed.unlockedBadges)) {
+            parsed.unlockedBadges = parsed.unlockedBadges.map((b: string) =>
+              b.replace(/siaga/gi, 'Penggalang').replace(/barung/gi, 'Regu')
+            );
+          }
+          if (parsed.name) parsed.name = parsed.name.replace(/siaga/gi, 'Penggalang');
+          if (parsed.scoutTroop) parsed.scoutTroop = parsed.scoutTroop.replace(/barung/gi, 'Regu');
+          return parsed;
         } catch {
           // fallback
         }
@@ -99,14 +107,13 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         openKmdGuide={() => setIsKmdModalOpen(true)}
-        openDeployGuide={() => setIsDeployModalOpen(true)}
         studentName={profile.name}
         score={profile.score}
       />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 pt-6 sm:pt-8">
-        {/* Unlocked Badges Mini Ribbon (if kid has earned badges) */}
+        {/* Unlocked Badges Mini Ribbon */}
         {profile.unlockedBadges.length > 0 && activeTab !== 'certificate' && (
           <div className="mb-6 p-3 rounded-2xl bg-white border border-amber-200/80 shadow-xs flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2 text-xs font-bold text-amber-900 shrink-0">
@@ -182,12 +189,6 @@ export default function App() {
       <KmdGuideModal
         isOpen={isKmdModalOpen}
         onClose={() => setIsKmdModalOpen(false)}
-      />
-
-      {/* Deploy & GitHub Guide Modal */}
-      <DeployGuideModal
-        isOpen={isDeployModalOpen}
-        onClose={() => setIsDeployModalOpen(false)}
       />
 
       {/* Printable CSS overrides */}

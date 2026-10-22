@@ -155,7 +155,7 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
 
               <div className="mt-4 p-3 rounded-xl bg-amber-100/70 border border-amber-200 text-left w-full">
                 <span className="text-[11px] font-bold text-amber-900 block mb-1">
-                  💡 Tips untuk Adik Pramuka:
+                  💡 Tips untuk Rekan Penggalang:
                 </span>
                 <p className="text-xs text-amber-950 leading-relaxed">
                   {selectedBin.tips}
@@ -242,7 +242,7 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
               Berapa Lama Sampah Hancur di Alam?
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
-              Tahukah adik-adik? Sampah anorganik membutuhkan waktu ratusan tahun untuk terurai di dalam tanah!
+              Tahukah Rekan Penggalang? Sampah anorganik membutuhkan waktu ratusan tahun untuk terurai di dalam tanah!
             </p>
           </div>
         </div>
@@ -282,9 +282,9 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
         <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950 flex items-start gap-3">
           <HelpCircle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
           <p>
-            <strong>Pelajaran Penting Pramuka:</strong> Sampah organik seperti sisa sayur dan kulit buah hancur dalam hitungan minggu dan menjadi nutrisi bagi tanah. 
-            Sebaliknya, 1 botol plastik yang adik buang sembarangan akan tetap ada di bumi hingga adik memiliki cucu dan cicit! 
-            Mari selalu gunakan tumbler dan buang sampah plastik ke tong kuning.
+            <strong>Pelajaran Penting Penggalang:</strong> Sampah organik seperti sisa sayur dan kulit buah hancur dalam hitungan minggu dan menjadi nutrisi bagi tanah. 
+            Sebaliknya, 1 botol plastik yang kita buang sembarangan akan tetap mencemari bumi hingga ratusan tahun! 
+            Mari selalu gunakan tumbler regu dan buang sampah plastik ke tong kuning.
           </p>
         </div>
       </section>
@@ -390,7 +390,7 @@ export const ExploreBins: React.FC<ExploreBinsProps> = ({ onStartGame, onTakeQui
             onClick={onStartGame}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-sm shadow-md transition-transform hover:scale-105"
           >
-            <span>Mulai Game Pilah Kilat Pramuka</span>
+            <span>Mulai Game Pilah Kilat Penggalang</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

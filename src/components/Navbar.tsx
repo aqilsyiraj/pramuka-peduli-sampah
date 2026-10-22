@@ -6,7 +6,6 @@ interface NavbarProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
   openKmdGuide: () => void;
-  openDeployGuide: () => void;
   studentName: string;
   score: number;
 }
@@ -15,7 +14,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeTab,
   setActiveTab,
   openKmdGuide,
-  openDeployGuide,
   studentName,
   score,
 }) => {
@@ -56,15 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="hidden sm:inline">Dasa Darma 2: Cinta Alam & Kasih Sayang Sesama Manusia</span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={openDeployGuide}
-              className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-600/80 hover:bg-emerald-600 text-white text-[11px] font-bold transition-colors border border-emerald-400/50"
-              title="Unduh Source Code & Cara Upload ke GitHub / Vercel"
-            >
-              <span>🚀 Deploy Vercel / GitHub</span>
-            </button>
-
+          <div className="flex items-center gap-3">
             <button
               onClick={openKmdGuide}
               className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-600/60 hover:bg-amber-600 text-amber-100 text-[11px] font-medium transition-colors border border-amber-500/50"
